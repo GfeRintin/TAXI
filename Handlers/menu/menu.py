@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher 
 from creat_bot import bot, db
-from Handlers.start import updateUsrName as uun
+from Handlers.start import updateUserName as uun
 from Handlers.task.order import location
 from aiogram.utils.callback_data import CallbackData
 
