@@ -1,6 +1,5 @@
-from aiogram import types, Dispatcher 
-from creat_bot import dp, bot, db, TOKEN
-from TOKEN import AdminID
+from creat_bot import db
+
 
 async def CheckAdmin(message):
     test = int(message)

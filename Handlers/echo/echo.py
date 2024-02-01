@@ -1,5 +1,5 @@
 from aiogram import types, Dispatcher 
-from creat_bot import dp, bot
+from creat_bot import bot
 from creat_bot import TOKEN 
 from TOKEN import chatId
 

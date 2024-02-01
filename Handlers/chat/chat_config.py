@@ -1,5 +1,5 @@
-from aiogram import types, Dispatcher
-from creat_bot import dp, bot, db, TOKEN
+from creat_bot import types, Dispatcher
+from creat_bot import bot
 
 async def new_user(message: types.Message):
     bot_obj = await bot.get_me()

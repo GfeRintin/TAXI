@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher 
-from creat_bot import dp, bot, db, TOKEN
-from Handlers.start import updateUserName as uun
+from creat_bot import bot, db
+from Handlers.start import updateUsrName as uun
 from Handlers.task.order import location
 from aiogram.utils.callback_data import CallbackData
 
@@ -12,7 +12,6 @@ async def menu_call(call: types.CallbackQuery):
     await menu(call.message)
 
 async def menu(message: types.Message):
-    #await bot.send_message(message.chat.id, text ="""Какой-то текст из вкладки меню""", reply_markup=types.ReplyKeyboardRemove() )
 
     uun.updateUserName(message)
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -25,8 +24,6 @@ async def menu(message: types.Message):
         types.InlineKeyboardButton(text='Помощь. Справка.', callback_data=menu_data.new(action='help', func='menu')),
         ]
     markup.add(*button)
-    # await bot.send_message(message.chat.id, 'Главное меню:', reply_markup=types.ReplyKeyboardRemove())
-        
     await bot.send_message(message.chat.id, text = 'Выбери действие⬇️', reply_markup = markup)
 
 async def order(call:types.CallbackQuery):

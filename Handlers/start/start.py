@@ -1,6 +1,6 @@
 import asyncio
 from aiogram import types, Dispatcher
-from creat_bot import dp, bot, db, TOKEN, SQLighter
+from creat_bot import bot, db, TOKEN, SQLighter
 from Handlers.menu import menu as mn
 import traceback
 from aiogram.dispatcher import FSMContext
